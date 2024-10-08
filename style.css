@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --success-color:green;
+    --invalid-color:orangered;
+    --label-color:gray;
+}
+
+*{
+    font-family: poppins;
+    box-sizing: border-box;
+}
+body{
+    background-color: cornsilk;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.container{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(125, 125, 125);
+    border-radius: 8px;
+    width: 400px;
+}
+h2{
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+.form{
+    padding: 30px 30px;
+}
+.form-control{
+    margin-bottom: 10px;
+    /* padding-bottom: 20px; */
+    position: relative;
+}
+.form-control label{
+    color: var(--label-color);
+    display: block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    border: 2px solid cornsilk;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+.form-control input:focus{
+    outline: 0;
+    border-color: var(--label-color);
+}
+.form button{
+    width: 100%;
+    padding: 7px 0px;
+    font-size: 17px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: darkblue;
+    color: white;
+}
+.form-control.success input{
+    border: 2px solid var(--success-color);
+}
+.form-control.invalid input{
+    border: 2px solid var(--invalid-color);
+}
+.form-control small{
+    color: var(--invalid-color);
+    visibility: hidden;
+}
+.form-control.invalid small{
+    visibility: visible;
+}
